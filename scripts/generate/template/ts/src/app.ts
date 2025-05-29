@@ -1,6 +1,9 @@
 import { join } from 'path'
 import { createBot, createProvider, createFlow, addKeyword, utils } from '@builderbot/bot'
 /** import-zone **/
+const adapterProvider = new BaileysProvider({
+  version: [2, 3000, 1023223821],
+});
 const PORT = process.env.PORT ?? 3008
 
 const discordFlow = addKeyword<Provider, Database>('doc').addAnswer(
